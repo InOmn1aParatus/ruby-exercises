@@ -39,38 +39,46 @@ RSpec.describe 'max_by' do
     smallest_array = arrays.max_by do |arr|
       -arr.length
     end
-
+      
     expect(smallest_array).to eq([:a, :b, :c])
   end
 
-  xit 'biggest number' do
+  it 'biggest number' do
     numbers = [1, 10, 100, 1000, 10000, 1000000]
 
-    # write code here
+    found = numbers.max_by do |num|
+      num
+    end
 
     expect(found).to eq(1000000)
   end
 
-  xit 'smallest number' do
+  it 'smallest number' do
     numbers = [1, 10, 100, 1000, 10000, 1000000]
 
-    # write code here
+    found = numbers.max_by do |num|
+      -num
+    end
 
     expect(found).to eq(1)
   end
 
-  xit 'most programmers' do
+  it 'most programmers' do
     programmers = {ruby: ["katrina", "sandi", "jim", "aaron", "desi"], java: ["abby", "jon", "susan"]}
 
-    # write code here
+    most_programmers = programmers.max_by do |lang|
+      lang.length
+    end
 
     expect(most_programmers.first).to eq(:ruby)
   end
 
-  xit 'fewest programmers' do
+  it 'fewest programmers' do
     programmers = {ruby: ["katrina", "sandi", "jim", "aaron", "desi"], java: ["abby", "jon", "susan"]}
 
-    # write code here
+    fewest_programmers = programmers.max_by do |lang|
+      # Figure thios out!
+    end
 
     expect(fewest_programmers.first).to eq(:java)
   end
