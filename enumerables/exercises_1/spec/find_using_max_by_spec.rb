@@ -77,7 +77,7 @@ RSpec.describe 'max_by' do
     programmers = {ruby: ["katrina", "sandi", "jim", "aaron", "desi"], java: ["abby", "jon", "susan"]}
 
     fewest_programmers = programmers.max_by do |lang|
-      # Figure thios out!
+      lang[0][2].to_s.bytes
     end
 
     expect(fewest_programmers.first).to eq(:java)
