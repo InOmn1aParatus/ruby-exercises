@@ -7,5 +7,15 @@ RSpec.describe Person do
       victim = Person.new('Perseus')
       expect(victim).to be_a(Person)
     end
+
+    it 'has attributes' do
+      victim = Person.new('Perseus')
+      expect(victim.name).to eq('Perseus')
+    end
+
+    it 'starts off not stoned' do
+      victim = Person.new('Perseus')
+      expect(victim.stoned?).to eq(false)
+    end
   end
 end
